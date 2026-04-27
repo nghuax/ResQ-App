@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResQ UI UX Audit</title>
+    <style>
+      :root {
+        --bg: #0d1117;
+        --panel: rgba(255, 255, 255, 0.9);
+        --panel-strong: #ffffff;
+        --text: #111827;
+        --muted: #5b6472;
+        --accent: #ee3224;
+        --accent-soft: rgba(238, 50, 36, 0.12);
+        --border: rgba(17, 24, 39, 0.08);
+        --success: #0f9d58;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(255, 126, 95, 0.25), transparent 32%),
+          radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 22%),
+          linear-gradient(145deg, #161d27 0%, #0d1117 100%);
+      }
+
+      main {
+        width: 1440px;
+        margin: 0 auto;
+        padding: 72px 64px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 18px;
+        margin-bottom: 40px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 920px;
+        color: #fff;
+        font-size: 56px;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-bottom: 28px;
+      }
+
+      .summary-card,
+      .audit-card {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 28px;
+        background: var(--panel);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.14);
+      }
+
+      .summary-card {
+        padding: 24px;
+      }
+
+      .summary-card strong {
+        display: block;
+        margin-top: 16px;
+        font-size: 26px;
+        letter-spacing: -0.03em;
+      }
+
+      .summary-card p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .section-title {
+        margin: 0 0 18px;
+        color: #fff;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+      }
+
+      .audit-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .audit-card {
+        padding: 26px;
+      }
+
+      .audit-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .priority {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .impact {
+        color: var(--success);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .audit-card h2 {
+        margin: 0 0 10px;
+        font-size: 28px;
+        letter-spacing: -0.03em;
+      }
+
+      .audit-card p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .recommendation {
+        padding: 18px;
+        border-radius: 20px;
+        background: var(--panel-strong);
+        border: 1px solid var(--border);
+      }
+
+      .recommendation strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .recommendation span {
+        display: block;
+        color: var(--text);
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">ResQ Design Review</span>
+        <h1>Recommendations to make the rescue journey faster, calmer, and easier to trust.</h1>
+        <p class="hero-copy">
+          The current prototype already has strong foundations: a clear emergency trigger, compact mobile framing,
+          and a usable end-to-end flow. The next design pass should focus on reducing decision time, increasing
+          trust signals, and separating urgent user actions from operational fixer tasks more clearly.
+        </p>
+      </section>
+
+      <section class="summary">
+        <article class="summary-card">
+          <div class="priority">Immediate</div>
+          <strong>Clarify urgency hierarchy</strong>
+          <p>Put emergency intent, ETA, and trust cues above browsing so stressed users can decide in seconds.</p>
+        </article>
+        <article class="summary-card">
+          <div class="priority">Core Flow</div>
+          <strong>Make status more human</strong>
+          <p>Track the person helping, what happens next, and when the user should act instead of showing raw steps alone.</p>
+        </article>
+        <article class="summary-card">
+          <div class="priority">Fixer Ops</div>
+          <strong>Separate dispatch from history</strong>
+          <p>Queue, SLA, and acceptance actions should dominate the fixer surface before secondary account functions.</p>
+        </article>
+      </section>
+
+      <h2 class="section-title">Priority Improvements</h2>
+      <section class="audit-grid">
+        <article class="audit-card">
+          <div class="audit-meta">
+            <span class="priority">P1</span>
+            <span class="impact">High impact on speed</span>
+          </div>
+          <h2>Reframe the first screen around urgency</h2>
+          <p>
+            The current Services view feels like a catalogue first and an emergency tool second. In a breakdown scenario,
+            users need instant reassurance, not a list they must interpret.
+          </p>
+          <div class="recommendation">
+            <strong>Recommended change</strong>
+            <span>
+              Add a sticky emergency banner above services with current location, estimated nearest help, and two dominant
+              choices: “Need urgent rescue” and “Book a service”. This reduces cognitive load and makes the product intent obvious.
+            </span>
+          </div>
+        </article>
+
+        <article class="audit-card">
+          <div class="audit-meta">
+            <span class="priority">P1</span>
+            <span class="impact">High impact on trust</span>
+          </div>
+          <h2>Upgrade service and garage cards with proof</h2>
+          <p>
+            Cards currently show name, price, and distance, but they do not help users quickly judge reliability while under stress.
+          </p>
+          <div class="recommendation">
+            <strong>Recommended change</strong>
+            <span>
+              Add verified badges, live availability, response confidence, and the strongest deciding metric in bold.
+              Example: ETA first for emergency, price first for planned service, rating secondary.
+            </span>
+          </div>
+        </article>
+
+        <article class="audit-card">
+          <div class="audit-meta">
+            <span class="priority">P1</span>
+            <span class="impact">High impact on comprehension</span>
+          </div>
+          <h2>Make order tracking feel more guided</h2>
+          <p>
+            The order screen has good detail, but the hierarchy is still information-heavy. Users should always know what is happening,
+            who is responsible, and whether they need to do anything.
+          </p>
+          <div class="recommendation">
+            <strong>Recommended change</strong>
+            <span>
+              Turn the top of the tracking screen into a live mission card with fixer identity, arrival window, and one explicit next step.
+              Keep the timeline below as supporting detail rather than the primary element.
+            </span>
+          </div>
+        </article>
+
+        <article class="audit-card">
+          <div class="audit-meta">
+            <span class="priority">P2</span>
+            <span class="impact">Medium impact on navigation</span>
+          </div>
+          <h2>Simplify the map and list choreography</h2>
+          <p>
+            The garage screen is visually interesting, but the user must mentally balance map markers, sheet expansion,
+            vehicle filters, and phone actions all at once.
+          </p>
+          <div class="recommendation">
+            <strong>Recommended change</strong>
+            <span>
+              Use a stronger selected state, persist the chosen garage in a compact sticky strip, and move comparison details
+              into expandable rows so scanning and commitment happen in one focused area.
+            </span>
+          </div>
+        </article>
+
+        <article class="audit-card">
+          <div class="audit-meta">
+            <span class="priority">P2</span>
+            <span class="impact">Medium impact on operations</span>
+          </div>
+          <h2>Redesign the fixer home around action density</h2>
+          <p>
+            The fixer flow is functional, but it behaves more like a generic app page than a live dispatch console.
+          </p>
+          <div class="recommendation">
+            <strong>Recommended change</strong>
+            <span>
+              Elevate waiting jobs, response deadline, distance, and accept or decline actions into the first viewport.
+              Keep account and historical content secondary so the screen works under operational pressure.
+            </span>
+          </div>
+        </article>
+
+        <article class="audit-card">
+          <div class="audit-meta">
+            <span class="priority">P2</span>
+            <span class="impact">Medium impact on accessibility</span>
+          </div>
+          <h2>Increase legibility and one-hand usability</h2>
+          <p>
+            The visual language is clean, but some chips, meta text, and floating actions are still small for a real roadside context,
+            especially outdoors and on moving devices.
+          </p>
+          <div class="recommendation">
+            <strong>Recommended change</strong>
+            <span>
+              Increase type contrast, raise minimum tap targets, keep critical actions in the thumb zone, and make status colors
+              more differentiated for active, pending, delayed, and completed states.
+            </span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      if (window.location.hash.includes("figmacapture=")) {
+        const captureScript = document.createElement("script");
+        captureScript.src = "https://mcp.figma.com/mcp/html-to-design/capture.js";
+        captureScript.async = true;
+        document.head.appendChild(captureScript);
+      }
+    </script>
+  </body>
+</html>

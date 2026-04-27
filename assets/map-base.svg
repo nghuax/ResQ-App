@@ -1,0 +1,53 @@
+<svg width="430" height="932" viewBox="0 0 430 932" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="430" height="932" rx="46" fill="#F8F5EF"/>
+  <path d="M-40 154C41 109 119 169 202 140C283 112 337 47 471 90" stroke="#E0DDD7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M-36 309C64 271 124 308 214 258C313 203 380 188 477 217" stroke="#E0DDD7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M-18 510C67 493 126 465 191 408C277 333 339 329 469 334" stroke="#E0DDD7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M-42 685C58 654 138 612 220 636C331 669 374 711 472 694" stroke="#E0DDD7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M-20 826C95 782 140 803 250 764C315 741 388 716 464 736" stroke="#E0DDD7" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M34 0V932" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M122 0V932" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M202 0V932" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M304 0V932" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M392 0V932" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+
+  <path d="M0 70H430" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 190H430" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 322H430" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 448H430" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 574H430" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 716H430" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 842H430" stroke="#E9E5DF" stroke-width="3" stroke-linecap="round"/>
+
+  <g opacity="0.85" stroke="#D6D3CD" stroke-width="2" stroke-linecap="round">
+    <path d="M8 119L102 45"/>
+    <path d="M112 149L230 31"/>
+    <path d="M178 205L341 51"/>
+    <path d="M278 183L415 65"/>
+    <path d="M40 361L144 257"/>
+    <path d="M132 401L250 279"/>
+    <path d="M237 420L369 286"/>
+    <path d="M17 550L151 434"/>
+    <path d="M135 595L277 460"/>
+    <path d="M259 615L401 498"/>
+    <path d="M23 767L165 646"/>
+    <path d="M127 822L274 685"/>
+    <path d="M246 844L395 721"/>
+  </g>
+
+  <g opacity="0.5" fill="#D7DBDF">
+    <path d="M-7 468C48 428 136 417 196 430C249 441 301 484 352 484C400 484 437 462 463 430V558C424 579 365 589 321 579C272 568 229 531 180 531C126 531 81 564 -7 619V468Z"/>
+    <path d="M208 731C253 693 334 678 421 704V789C362 778 323 782 287 804C247 828 208 843 166 843C120 843 73 823 0 781V721C66 682 110 664 154 669C176 671 191 686 208 731Z"/>
+  </g>
+
+  <g opacity="0.65" fill="#A4ACB5" font-family="'IBM Plex Mono', monospace" font-size="12">
+    <text x="46" y="225">Hồ Bơi Lam Sơn</text>
+    <text x="232" y="210">Lý Thái Tổ</text>
+    <text x="52" y="516">Võ Văn Kiệt</text>
+    <text x="287" y="411">Trần Hưng Đạo</text>
+    <text x="166" y="873">Nguyễn Văn Linh</text>
+    <text x="248" y="664">Rạch Xóm Củi</text>
+    <text x="72" y="707">Hồ Bơi Hòa Bình</text>
+  </g>
+</svg>
