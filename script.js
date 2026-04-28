@@ -1517,49 +1517,6 @@ function renderServicesScreen() {
           </div>
         </div>
 
-        <section class="rescue-banner">
-          <div class="rescue-banner-top">
-            <span class="rescue-banner-eyebrow">Cứu hộ ưu tiên</span>
-            <span class="rescue-inline-location">${icon("pin")} ${USER_LOCATION_SHORT}</span>
-          </div>
-          <h2>${hasOpenOrder ? "Yêu cầu của bạn vẫn đang được ResQ theo dõi" : "Cần cứu hộ ngay tại vị trí hiện tại?"}</h2>
-          <p>${
-            hasOpenOrder
-              ? `Trạng thái hiện tại là ${escapeHtml(state.liveRequest?.status ?? "Đang xử lý")} và ETA đang giữ ở ${escapeHtml(rescueEta)}.`
-              : `${escapeHtml(nearestGarage?.name ?? "ResQ Dispatch")} đang là điểm điều phối gần nhất, có thể tiếp cận trong ${escapeHtml(rescueEta)}.`
-          }</p>
-
-          <div class="rescue-kpi-grid">
-            <div class="rescue-kpi">
-              <span>Nearest ETA</span>
-              <strong>${escapeHtml(rescueEta)}</strong>
-            </div>
-            <div class="rescue-kpi">
-              <span>Điểm điều phối</span>
-              <strong>${escapeHtml(nearestGarage?.name ?? "ResQ Hub")}</strong>
-            </div>
-            <div class="rescue-kpi">
-              <span>Độ tin cậy</span>
-              <strong>${escapeHtml(getEtaConfidenceLabel(rescueEta))}</strong>
-            </div>
-          </div>
-
-          <div class="rescue-banner-actions">
-            <button class="primary-button" data-action="${rescuePrimaryAction}"${rescuePrimaryValue}>
-              ${hasOpenOrder ? "Tiếp tục cứu hộ" : "Điều phối cứu hộ"}
-            </button>
-            <button class="secondary-button" data-action="${rescueSecondaryAction}" data-value="${rescueSecondaryValue}">
-              ${hasOpenOrder ? "Mở garage gần nhất" : "Đặt dịch vụ theo kế hoạch"}
-            </button>
-          </div>
-        </section>
-
-        <div class="filter-row mobile-filter-row">
-          ${renderFilterButton("all", "Tất cả")}
-          ${renderFilterButton("motorbike", "Xe máy")}
-          ${renderFilterButton("car", "Ô tô")}
-        </div>
-
         <div class="service-section-head">
           <div>
             <p>Dịch vụ theo kế hoạch</p>

@@ -17,8 +17,20 @@
   --shadow-stage: 0 40px 120px rgba(8, 11, 13, 0.18);
   --shadow-card: 0 18px 40px rgba(8, 11, 13, 0.08);
   --shadow-phone: 0 60px 140px rgba(8, 11, 13, 0.34);
-  --display: "Syne", sans-serif;
-  --mono: "IBM Plex Mono", monospace;
+  --display: "Syne", "Be Vietnam Pro", sans-serif;
+  --body: "Be Vietnam Pro", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-md: 15px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --display-sm: 28px;
+  --display-md: 36px;
+  --display-lg: 48px;
+  --ls-tight: -0.02em;
+  --ls-display: -0.04em;
+  --ls-eyebrow: 0.12em;
   --app-dock-gap: 16px;
   --app-dock-height: 78px;
   --app-safe-top: env(safe-area-inset-top, 0px);
@@ -40,8 +52,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: var(--mono);
+  font-family: var(--body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
   color: var(--surface-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(255, 228, 215, 0.42), transparent 32%),
@@ -583,9 +600,10 @@ button {
 }
 
 .hello-card h1 {
-  font-family: var(--mono);
-  font-size: 24px;
-  letter-spacing: -0.02em;
+  font-family: var(--body);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: var(--ls-tight);
 }
 
 .muted-text {
@@ -1172,10 +1190,11 @@ button {
 
 .auth-gate-shell h1 {
   margin: 0;
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: 26px;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: var(--ls-tight);
 }
 
 .auth-gate-copy {
@@ -3157,9 +3176,10 @@ body.is-launch-screen .status-island {
 .page-heading h1 {
   margin: 0;
   color: #080b0d;
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: 22px;
-  line-height: 33px;
+  line-height: 1.25;
+  letter-spacing: var(--ls-tight);
   font-weight: 700;
 }
 
@@ -3584,10 +3604,11 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 }
 
 .order-empty--figma h2 {
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: 18px;
-  line-height: 27px;
-  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: var(--ls-tight);
 }
 
 .profile-shell--figma {
@@ -3967,9 +3988,10 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 .emergency-sheet-top h2 {
   margin: 8px 0 0;
   color: #fff;
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: 18px;
-  line-height: 27px;
+  line-height: 1.35;
+  letter-spacing: var(--ls-tight);
   font-weight: 700;
 }
 
@@ -4299,7 +4321,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 .sos-headline p {
   margin: 8px 0 0;
   color: #8a8f99;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 13px;
   line-height: 1.5;
 }
@@ -4366,7 +4388,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 
 .sos-core em {
   font-style: normal;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 11px;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.92);
@@ -4386,7 +4408,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
 }
 
 .sos-location-head strong {
@@ -4434,7 +4456,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 
 .sos-location-copy p {
   margin: 0;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 12px;
   line-height: 1.5;
   color: #4d5460;
@@ -4466,7 +4488,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 .rescue-form-caption {
   margin: 6px 0 0;
   text-align: center;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 12px;
   color: #6c7280;
 }
@@ -4499,7 +4521,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
   width: 100%;
   border: 0;
   outline: none;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 14px;
   color: #111316;
   background: transparent;
@@ -4525,7 +4547,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 
 .rescue-input-cell em {
   font-style: normal;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 11px;
   color: #9aa1ad;
 }
@@ -4539,7 +4561,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 .rescue-form-help {
   margin: 4px 6px 0;
   text-align: center;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 11px;
   line-height: 1.5;
   color: #9aa1ad;
@@ -4555,7 +4577,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
   border-radius: 14px;
   background: var(--accent);
   color: #fff;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -4635,7 +4657,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
   display: inline-flex;
   align-items: baseline;
   gap: 2px;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -4655,7 +4677,7 @@ body[data-app-mode="fixer"] .compact-map-shell .order-map-layer--inline {
 .order-tab-row .pill-button {
   border-radius: 999px;
   padding: 8px 18px;
-  font-family: var(--mono, 'IBM Plex Mono'), monospace;
+  font-family: var(--body);
   font-size: 13px;
   transition: background 160ms ease, color 160ms ease;
 }
